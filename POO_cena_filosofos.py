@@ -3,6 +3,7 @@ import threading
 import time
 import random
 
+# ORIENTADO A OBJETOS PERO DPS SEPARARLO EN MODELO VISTA CONTROLADOR COOMO SIEMPRE
 class Tenedor():
     def __init__():
         pass
