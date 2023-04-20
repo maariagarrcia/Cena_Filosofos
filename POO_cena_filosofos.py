@@ -34,11 +34,26 @@ class Tenedor():
         self.filosofo = None
         self.lock: threading.Lock = threading.Lock()
 
-    def usar(self):
-        pass
+    def usar(self, filosofo, max_reintentos: int = 5) -> bool:
+        intento = 1
+        while not self.lock.acquire(blocking=False):
+            if (intento > max_reintentos):
+                return False  # no se ha conseguido usar el tenedor
+
+            # no ha conseguido bloquear el tenedor -> nos ponemos a pensar
+            #print(f"El filosofo {filosofo.id} esta pensando")
+            time.sleep(0.001)  # tiempo para pensar
+            intento += 1
+        print(Fore.RED+"* Tenedor: "+self.id +
+              " Bloqueado por: " +filosofo.id+ Fore.WHITE)
+        self.filosofo = filosofo
+        return True
 
     def dejar_de_usar(self):
-        pass
+        print(Fore.RED+"* Tenedor: "+self.id +
+              " Desbloqueado por: " +self.filosofo.id+ Fore.WHITE)
+        self.filosofo = None
+        self.lock.release()
 
 
 class Filosofo(threading.Thread):
@@ -82,21 +97,21 @@ class Filosofo(threading.Thread):
             time.sleep(random.random())
 
 
-
 def main():
-    # crer los 5 tenedores
-    tenedores=[None]*5
-    for i in range(0,5):
-        tenedores[i]=Tenedor(str(i))
+    # crear los 5 tenedores
+    tenedores = [None]*5
+    for i in range(0, 5):
+        tenedores[i] = Tenedor(str(i))
 
     # crear los 5 filosofos
-    filosofos=[None]*5
-    for i in range(0,5):
-        filosofos[i]=Filosofo(str(i),tenedores[i],tenedores[i+1])
+    filosofos = [None]*5
+    for i in range(0, 5):
+        filosofos[i] = Filosofo(str(i), tenedores[i], tenedores[i-1])
 
     # Arrancar los 5 filosoos para que empiecen a comer
-    for i in range(0,5):
+    for i in range(0, 5):
         filosofos[i].start()
+
 
 
 if __name__ == '__main__':
