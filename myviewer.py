@@ -2,13 +2,13 @@ import tkinter as tk
 from PIL import Image, ImageTk
 import math
 import filosofos as ph
-import colorama
+from colorama import Fore
 
 
 class MyViewer():
     def __init__(self):
         super(MyViewer, self).__init__()
-
+        # ventana del tkinter
         self.window = tk.Tk()
         self.window.title("Filósofos comensales")
 
@@ -25,12 +25,12 @@ class MyViewer():
 
     def philosopher_status_changed(
             self, philosopher_num: int, new_status):
-        print(colorama.Fore.YELLOW, philosopher_num, new_status)
+        print(Fore.YELLOW, philosopher_num, new_status)
 
         self.draw_philosopher(philosopher_num, self.images[new_status])
 
     def fork_status_changed(self, fork_num: int, new_status):
-        print(colorama.Fore.LIGHTGREEN_EX, fork_num, new_status)
+        print(Fore.LIGHTGREEN_EX, fork_num, new_status)
 
     def draw_complete_scenario(self):
         # Dibuja mesa
@@ -44,7 +44,7 @@ class MyViewer():
             # draw_fork(0, images['fork_0'])
 
     def draw_fork(self, fork_num, image: ImageTk.PhotoImage, color=""):
-        # Tenedor
+        # Tenedor 
         angle = fork_num * 2 * math.pi / 5 + math.pi/5
         x = 250 + 100 * math.cos(angle)
         y = 250 - 100 * math.sin(angle)
