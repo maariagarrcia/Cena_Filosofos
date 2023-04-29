@@ -19,7 +19,7 @@ if not self.fork_left.usar(self):
     print(Fore.WHITE +
           "· Philosopher [" + str(self.id) + "]  No consigue Fork iquierdo ...")
     return True   # ================================>
-Usar Fork derecha
+#Usar Fork derecha
 self.set_status(PhilosopherStatus.THINKING)
 if not self.fork_right.usar(self):
     self.fork_left.dejar_de_usar()
