@@ -3,10 +3,12 @@
 <img width="491" alt="image" src="https://user-images.githubusercontent.com/93185415/235310183-ffe78aa5-ae5d-4a3a-afb0-19381fe8b435.png">
 
 2) EXPLICACIÓN
+
 El problema de la cena de los filósofos es un problema clásico de concurrencia en informática que se utiliza para ilustrar los problemas que pueden surgir al coordinar varios procesos que compiten por recursos compartidos. En este caso, el problema implica a cinco filósofos sentados en una mesa redonda, cada uno con un tenedor a su izquierda y derecha y un plato de espaguetis frente a ellos. Los filósofos pasan su tiempo alternando entre comer y pensar, pero solo pueden hacer una actividad a la vez y necesitan dos tenedores para comer.
 El problema surge cuando todos los filósofos intentan tomar el tenedor de su izquierda y el de su derecha simultáneamente, lo que lleva a un bloqueo mutuo en el que nadie puede comer. La solución a este problema implica el uso de hilos. 
 
 3) PREVENCIÓN DEADLOCK
+
 Para evitar el bloqueo mutuo, hacemos uso de Locks, que son mecanismos de sincronización que permiten a los procesos o hilos acceder a recursos compartidos de manera exclusiva. 
 
 En resumen, el algoritmo usado para la resolución de este problema es el siguiente: 
