@@ -6,8 +6,6 @@ from VISTA.myviewer import *
 import enum
 from CONTROLADOR.controlador import *
 
-# PRO  AHORA  EL MOODELO Y VISTA ESTAN SEPARADOS YA
-# EL SIMULATOR ES EL CONTROLADOR
 
 # CREAMOS DOS CLASES: Tenedor y Filosofo
 
