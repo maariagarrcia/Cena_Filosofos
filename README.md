@@ -26,12 +26,12 @@ if not self.fork_right.usar(self):
     print(Fore.WHITE + "· Philosopher [" + str(self.id) +
           "]  liberando Fork izquierdo (prevención Deadlock)...")
     return False  # ==================================>
-Comer
+#Comer
 self.set_status(self.status.EATING)
 time.sleep(2)  # Tiempo para comer
-Dejar de usar Fork derecha
+#Dejar de usar Fork derecha
 self.fork_left.dejar_de_usar()
-Usar Fork iquierda
+#Usar Fork iquierda
 self.fork_right.dejar_de_usar()
 return True
 ```
