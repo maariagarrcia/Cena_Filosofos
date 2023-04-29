@@ -2,8 +2,9 @@ from colorama import Fore
 import threading
 import time
 import random
-from myviewer import *
+from VISTA.myviewer import *
 import enum
+from CONTROLADOR.controlador import *
 
 # PRO  AHORA  EL MOODELO Y VISTA ESTAN SEPARADOS YA
 # EL SIMULATOR ES EL CONTROLADOR
@@ -156,19 +157,11 @@ class Simulator():
             self.Philosophers[i].start()
 
 
-def philosopher_callback(id, new_status):
-    print(Fore.YELLOW, id, new_status)
-
-
-def fork_callback(id, new_status):
-    print(Fore.LIGHTGREEN_EX, id, new_status)
-
-
-def main():
+def main_modelo():
     sim = Simulator(philosopher_callback, fork_callback)
     sim.run()
 
 
 if __name__ == '__main__':
-    main()
+    main_modelo()
 

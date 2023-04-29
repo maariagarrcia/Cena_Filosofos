@@ -1,7 +1,7 @@
 import tkinter as tk
 from PIL import Image, ImageTk
 import math
-import filosofos as ph
+import MODELO.filosofos as ph
 from colorama import Fore
 
 
@@ -90,10 +90,10 @@ class MyViewer():
         sim.run()
 
 
-def main():
+def main_viewer():
     vw = MyViewer()
 
 
 if __name__ == '__main__':
-    main()
+    main_viewer()
 
