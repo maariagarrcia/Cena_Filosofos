@@ -12,8 +12,8 @@ En resumen, el algoritmo usado para la resolución de este problema es el siguie
 - Si lo consigue empezará a comer ---> cuando acabe se liberaran los dos para que otro pueda usarlo
 - Si no consigue el tenedor derecho liberará el tenedor izquierdo.
 
-""
 
+```ruby
 self.set_status(PhilosopherStatus.THINKING)
 if not self.fork_left.usar(self):
     print(Fore.WHITE +
@@ -34,5 +34,5 @@ self.fork_left.dejar_de_usar()
 Usar Fork iquierda
 self.fork_right.dejar_de_usar()
 return True
+```
 
-""
