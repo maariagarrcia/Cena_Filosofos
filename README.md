@@ -12,26 +12,25 @@ En resumen, el algoritmo usado para la resolución de este problema es el siguie
 - Si lo consigue empezará a comer ---> cuando acabe se liberaran los dos para que otro pueda usarlo
 - Si no consigue el tenedor derecho liberará el tenedor izquierdo.
 
-\\
+''
 self.set_status(PhilosopherStatus.THINKING)
 if not self.fork_left.usar(self):
     print(Fore.WHITE +
           "· Philosopher [" + str(self.id) + "]  No consigue Fork iquierdo ...")
     return True   # ================================>
-# Usar Fork derecha
-# print("· Philosopher [" + self.id + "]  usar Fork derecho")
+Usar Fork derecha
 self.set_status(PhilosopherStatus.THINKING)
 if not self.fork_right.usar(self):
     self.fork_left.dejar_de_usar()
     print(Fore.WHITE + "· Philosopher [" + str(self.id) +
           "]  liberando Fork izquierdo (prevención Deadlock)...")
     return False  # ==================================>
-# Comer
+Comer
 self.set_status(self.status.EATING)
 time.sleep(2)  # Tiempo para comer
-# Dejar de usar Fork derecha
+Dejar de usar Fork derecha
 self.fork_left.dejar_de_usar()
-# Usar Fork iquierda
+Usar Fork iquierda
 self.fork_right.dejar_de_usar()
 return True
-\\
+''
