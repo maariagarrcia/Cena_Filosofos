@@ -18,7 +18,7 @@ En resumen, el algoritmo usado para la resolución de este problema es el siguie
 - Si lo consigue empezará a comer ---> cuando acabe se liberaran los dos para que otro pueda usarlo
 - Si no consigue el tenedor derecho liberará el tenedor izquierdo.
 
-4) TROZO DE CÓDIGO PRINCIPAL
+4) TROZO DE CÓDIGO IMPORTANTE
 
 ```ruby
 self.set_status(PhilosopherStatus.THINKING)
