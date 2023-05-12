@@ -3,6 +3,7 @@
 
 <img width="470" alt="image" src="https://github.com/maariagarrcia/Cena_Filosofos/assets/93185415/7782cadf-da49-49b1-94db-fb796f2d42e7">
 
+
 2) EXPLICACIÓN
 
 El problema de la cena de los filósofos es un problema clásico de concurrencia en informática que se utiliza para ilustrar los problemas que pueden surgir al coordinar varios procesos que compiten por recursos compartidos. En este caso, el problema implica a cinco filósofos sentados en una mesa redonda, cada uno con un tenedor a su izquierda y derecha y un plato de espaguetis frente a ellos. Los filósofos pasan su tiempo alternando entre comer y pensar, pero solo pueden hacer una actividad a la vez y necesitan dos tenedores para comer.
