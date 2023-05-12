@@ -1,7 +1,7 @@
 #  CENA DE LOS FILOSOFOS
 1) VISUALIZACIÓN EN EL TKINTER
+![image](https://github.com/maariagarrcia/Cena_Filosofos/assets/93185415/1941d2bf-1768-4658-9f76-8e79447a196b)
 
-![image](https://github.com/maariagarrcia/Cena_Filosofos/assets/93185415/c45a1dfc-5785-40c9-8fbd-f11645238d44)
 
 2) EXPLICACIÓN
 
